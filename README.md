@@ -1,7 +1,14 @@
 # 7_segment_display
 My first personal project. I would like be able, with a breadboard and wires, to display 10 numbers (0 -> 9) when I push some buttons. These will then be incremented by 1 each time with another button. 
 
-## Table de vérité 
+## Conventions
+- A, B, C and D represent the BCD input bits.
+- A is the most significant bit (8) and D the least significant bit (1).
+- 1 = a segment is ON
+- 0 = a segment is OFF
+- Inputs 10 to 15 are invalid BCD values and are treated as X states
+
+## Truth tables
 
 | A = 8 | B = 4 | C = 2 | D = 1 | Décimal | a | b | c | d | e | f | g |
 | --- | --- | --- | --- | :---: | --- | --- | --- | --- | --- | --- |--- |
@@ -27,5 +34,12 @@ My first personal project. I would like be able, with a breadboard and wires, to
 
 source: https://www.bragitoff.com/2015/10/digital-logic-ics-with-symbols-and-truth-tables/
 
-a =  A OR C OR (B AND D) OR (NOT B AND NOT D)
-b = NOT B OR (NOT C AND NOT D) OR (C AND D)
+## Boolean equations
+So after doing Karnaugh's maps I found these: 
++ a = A OR C OR (B AND D) OR (NOT B AND NOT D)
++ b = NOT B OR (NOT C AND NOT D) OR (C AND D)
++ c = B OR D OR NOT C
++ d = A OR (NOT B AND NOT D) OR (NOT B AND C) OR (C AND NOT D) OR (B AND NOT C AND D)
++ e = (NOT B AND NOT D) OR (C AND NOT D)
++ f = A OR (NOT C AND NOT D) OR (B AND NOT C) OR (B AND NOT D)
++ g = A OR (NOT B AND C) OR (B AND NOT C) OR (C AND NOT D)
