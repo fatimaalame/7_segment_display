@@ -17,5 +17,6 @@ My first personal project. I would like be able, with a breadboard and wires, to
 | 1 | 0 | 0 | 1 | 9 | 1 | 1 | 1 | 0 | 0 | 1 | 1 |
 
 ### As a reminder, these are the logic gates tables 
+![The gates](fatimaalame/7_segment_display/logic_gates.png)
 
-
+source: https://www.bragitoff.com/2015/10/digital-logic-ics-with-symbols-and-truth-tables/
